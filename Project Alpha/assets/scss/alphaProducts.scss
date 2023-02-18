@@ -1,0 +1,114 @@
+@import './customs';
+
+main {
+    @include flex(column, center, center);
+    padding-block: 3rem;
+
+    .main-title {
+        font-family: $gloock;
+        color: $primary;
+        font-size: 7rem;
+        letter-spacing: 0.2rem;
+    }
+
+    hr {
+        margin-top: 2rem;
+        width: 500px;
+    }
+
+    .main-description {
+        text-align: center;
+        width: 850px;
+        margin-block: 1rem;
+        color: $primary;
+        font-size: 13px;
+    }
+
+    .wrapper {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        gap: 2rem;
+        width: 100%;
+
+        section {
+            @include flex(row, center, start);
+            background-image: url("../images/bg-leaves.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: -2%;
+            padding: 3rem;
+            transition: all 1s;
+            width: 100%;
+            box-shadow: $nav-shadow;
+            
+            img {
+                margin-top: 1rem;
+                width: 500px;
+                object-fit: fill;
+                filter: brightness(0.8);
+            }
+
+            .content {
+                @include flex(column, start, start);
+                gap: 1rem;
+
+                .header {
+                    text-align: left;
+
+                    .title {
+                        font-size: 5rem;
+                        font-family: $gloock;
+                        color: $gray;
+                    }
+
+                    hr {
+                        margin-top: 1rem;
+                    }
+
+                    .brief {
+                        font-weight: $fw-normal;
+                    }
+                }
+
+                .body {
+
+                    p {
+                        font-weight: $fw-thin;
+                        font-size: 14px;
+                        margin-bottom: 2rem;
+
+                        strong {
+                            color: $gray;
+                        }
+                    }
+                }
+
+                .footer {
+                    @include flex(row, center, start);
+                    margin-top: 2rem;
+                    gap: 2rem;
+
+                    button {
+                        position: relative;
+                        background-color: $secondary;
+                        padding: 1rem 3rem 1rem 2rem;
+    
+                        i {
+                            position: absolute;
+                            top: 33%;
+                            right: 15%;
+                        }
+                    }
+
+                    .price {
+                        font-family: $price-font;
+                        font-weight: $fw-thin;
+                        color: $gray;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

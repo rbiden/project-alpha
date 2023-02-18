@@ -1,0 +1,41 @@
+@import './customs';
+
+nav {
+    @include flex(row, center, space-between);
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 3rem;
+    background-color: $bg;
+    z-index: 2;
+
+    .nav-items, .nav-addons {
+        @include flex(row, center, start);
+        z-index: 1;
+        ul {
+            @include flex(row, center, center);
+            gap: 1.5rem;
+
+            li {
+                text-align: center;
+                a {
+                    transition: all 0.5s;
+                    color: $primary;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .nav-brand {
+        @include flex(row, center, center);
+        h3 {
+            font-family: $gloock;
+            margin-left: 0.5rem;
+        }
+    }
+    
+    .nav-addons {
+        @include flex(row, center, end);
+    }
+}

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gloock&family=Poppins:wght@300;500;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fffdf7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
+}
+
+button {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  font-weight: 500;
+  font-size: medium;
+  border-radius: 0.3rem;
+  border: 0;
+  outline: 0;
+}
+
+button:active {
+  scale: 0.99;
+}
+
+button:hover {
+  background-color: #f1b414;
+}
+
+input[type=search], input[type=text] {
+  position: relative;
+  padding-block: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 1rem;
+  background-color: #f5cb5c;
+  border: solid 2px currentColor;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  outline: 0;
+  color: #121212;
+}
+
+input[type=search]:focus, input[type=text]:focus {
+  outline: solid 3px currentColor;
+}
+
+.floating-group {
+  position: relative;
+  overflow: hidden;
+}
+.floating-group input {
+  text-indent: 1.5rem;
+  margin: 0;
+  font-size: 1rem;
+  width: 90%;
+}
+.floating-group label {
+  position: absolute;
+  font-size: medium;
+  transition: all 0.3s;
+  pointer-events: none;
+  font-weight: 300;
+}
+.floating-group input:focus ~ label, .floating-group input:valid ~ label {
+  transform: translateY(-200%);
+}
+
+.nav-active {
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #6c757d;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 3rem;
+}
+main .main-title {
+  font-family: "Gloock", serif;
+  color: #121212;
+  font-size: 7rem;
+  letter-spacing: 0.2rem;
+}
+main hr {
+  margin-top: 2rem;
+  width: 500px;
+}
+main .main-description {
+  text-align: center;
+  width: 850px;
+  margin-block: 1rem;
+  color: #121212;
+  font-size: 13px;
+}
+main .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 2rem;
+  width: 100%;
+}
+main .wrapper section {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  background-image: url("../images/bg-leaves.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -2%;
+  padding: 3rem;
+  transition: all 1s;
+  width: 100%;
+  box-shadow: 0px 0px 9px 1px #6c757d;
+}
+main .wrapper section img {
+  margin-top: 1rem;
+  width: 500px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  filter: brightness(0.8);
+}
+main .wrapper section .content {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .wrapper section .content .header {
+  text-align: left;
+}
+main .wrapper section .content .header .title {
+  font-size: 5rem;
+  font-family: "Gloock", serif;
+  color: #6c757d;
+}
+main .wrapper section .content .header hr {
+  margin-top: 1rem;
+}
+main .wrapper section .content .header .brief {
+  font-weight: 500;
+}
+main .wrapper section .content .body p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+main .wrapper section .content .body p strong {
+  color: #6c757d;
+}
+main .wrapper section .content .footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+main .wrapper section .content .footer button {
+  position: relative;
+  background-color: #f5cb5c;
+  padding: 1rem 3rem 1rem 2rem;
+}
+main .wrapper section .content .footer button i {
+  position: absolute;
+  top: 33%;
+  right: 15%;
+}
+main .wrapper section .content .footer .price {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 300;
+  color: #6c757d;
+  font-size: 2rem;
+}

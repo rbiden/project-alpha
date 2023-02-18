@@ -1,0 +1,57 @@
+@import './customs';
+
+footer {
+    background-color: $gray;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    
+    .brand {
+        @include flex(row, center, start);
+
+        h3 {
+            font-family: $gloock;
+            color: $font-color;
+            margin-left: 0.5rem;
+        }
+    }
+    
+    section {
+        @include flex(row, start, start);
+        margin: 2rem;
+        gap: 6rem;
+
+        article {
+
+            h3 {
+                font-family: $gloock;
+                font-size: 2rem;
+                color: $secondary;
+                margin-left: 0.5rem;
+            }
+
+            ul {
+                @include flex(column, start, start);
+                padding-left: 1rem;
+                margin-top: 1rem;
+                gap: 1rem;
+
+                li {
+                    i {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        @include flex(row, center, center);
+        margin-top: 2rem;
+        padding-block: 1rem;
+        border-top: solid 1px $gray-lighter;
+        font-size: 14px;
+        color: $font-color;
+        font-weight: $fw-thin;
+        margin-left: 0.5rem;
+    }
+}
