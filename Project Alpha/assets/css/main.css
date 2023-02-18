@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gloock&family=Poppins:wght@300;500;700&display=swap");
-h1, h2, h3, h4, h5, h6, p, small {
+h1, h2, h3, h4, h5, h6, small {
   margin: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -124,6 +124,10 @@ nav .nav-items ul li a, nav .nav-addons ul li a {
   color: #121212;
   font-size: 14px;
 }
+nav .nav-items ul li .nav-active, nav .nav-addons ul li .nav-active {
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #6c757d;
+}
 nav .nav-brand {
   display: flex;
   align-items: center;
@@ -155,7 +159,7 @@ main .main-title {
   letter-spacing: 0.2rem;
 }
 main hr {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 500px;
 }
 main .main-description {
@@ -175,25 +179,7 @@ main .wrapper {
   gap: 2rem;
   width: 100%;
 }
-main .wrapper section:not(.active) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background-color: #FCF3F4;
-  box-shadow: 0px 0px 9px 1px #6c757d;
-  padding: 3rem;
-  border-radius: 0.5rem;
-  transition: all 1s;
-}
-main .wrapper section:not(.active) img {
-  margin-top: 1rem;
-  width: 200px;
-  -o-object-fit: fill;
-     object-fit: fill;
-  filter: brightness(0.9);
-}
-main .wrapper .active {
+main .wrapper section {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -207,44 +193,44 @@ main .wrapper .active {
   width: 100%;
   box-shadow: 0px 0px 9px 1px #6c757d;
 }
-main .wrapper .active img {
+main .wrapper section img {
   margin-top: 1rem;
   width: 500px;
   -o-object-fit: fill;
      object-fit: fill;
   filter: brightness(0.8);
 }
-main .wrapper .active .content {
+main .wrapper section .content {
   display: flex;
   align-items: start;
   justify-content: start;
   flex-direction: column;
   gap: 1rem;
 }
-main .wrapper .active .content .header {
+main .wrapper section .content .header {
   text-align: left;
 }
-main .wrapper .active .content .header .title {
+main .wrapper section .content .header .title {
   font-size: 5rem;
   font-family: "Gloock", serif;
   color: #6c757d;
 }
-main .wrapper .active .content .header hr {
+main .wrapper section .content .header hr {
   float: left;
   margin-top: 1rem;
 }
-main .wrapper .active .content .header .brief {
+main .wrapper section .content .header .brief {
   font-weight: 500;
 }
-main .wrapper .active .content .body p {
+main .wrapper section .content .body p {
   font-weight: 300;
   font-size: 14px;
   margin-bottom: 2rem;
 }
-main .wrapper .active .content .body p strong {
+main .wrapper section .content .body p strong {
   color: #6c757d;
 }
-main .wrapper .active .content .footer {
+main .wrapper section .content .footer {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -252,19 +238,75 @@ main .wrapper .active .content .footer {
   margin-top: 2rem;
   gap: 2rem;
 }
-main .wrapper .active .content .footer button {
+main .wrapper section .content .footer button {
   position: relative;
   background-color: #f5cb5c;
   padding: 1rem 3rem 1rem 2rem;
 }
-main .wrapper .active .content .footer button i {
+main .wrapper section .content .footer button i {
   position: absolute;
   top: 33%;
   right: 15%;
 }
-main .wrapper .active .content .footer .price {
+main .wrapper section .content .footer .price {
   font-family: "Fjalla One", sans-serif;
   font-weight: 300;
   color: #6c757d;
   font-size: 2rem;
+}
+
+footer {
+  background-color: #6c757d;
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+footer .brand {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+footer .brand h3 {
+  font-family: "Gloock", serif;
+  color: #f8f9fa;
+  margin-left: 0.5rem;
+}
+footer section {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  margin: 2rem;
+  gap: 6rem;
+}
+footer section article h3 {
+  font-family: "Gloock", serif;
+  font-size: 2rem;
+  color: #f5cb5c;
+  margin-left: 0.5rem;
+}
+footer section article ul {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+footer section article ul li i {
+  margin-right: 1rem;
+}
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2rem;
+  padding-block: 1rem;
+  border-top: solid 1px #e9e4e4;
+  font-size: 14px;
+  color: #f8f9fa;
+  font-weight: 300;
+  margin-left: 0.5rem;
 }
