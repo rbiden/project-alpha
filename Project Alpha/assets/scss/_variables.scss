@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gloock&family=Poppins:wght@300;500;700&display=swap');
+
+// Font Family
+$poppins: 'Poppins', sans-serif;
+$gloock: 'Gloock', serif;
+$price-font: 'Fjalla One', sans-serif;
+
+// Font Weights
+$fw-thin: 300;
+$fw-normal: 500;
+$fw-bold: 700;
+
+// Colors
+$primary: #121212;
+$bg: #fffdf7;
+$bg-lighter: #FCF3F4;
+$secondary: #f5cb5c;
+$gray: #6c757d;
+$gray-lighter: #e9e4e4;
+$font-color: #f8f9fa;
+$gradient: linear-gradient(333deg, #fffed5 0%, #56564a 30%, #000000 60%);
+
+
+
+$valid: #80b918;
+$invalid: #e5383b;
+
+// Shadows
+$nav-shadow: 0px 0px 9px 1px $gray;
